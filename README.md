@@ -18,3 +18,11 @@ sendmail_path = /usr/sbin/sendmail -t -i
 
 (※)
 sudo service sendmail start
+
+☆ Prettier
+setting.json
+{
+    "[php]": {
+        "editor.formatOnSave": true
+    }
+}
