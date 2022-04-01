@@ -10,8 +10,21 @@ class Person
         $this->lastName = $lastName;
     }
 
+    public function __toString(): string
+    {
+        return $this->lastName . $this->firstName;
+    }
+
     public function show(): void
     {
         print "<p>ボクの名前は{$this->lastName}{$this->firstName}です。</p>";
+    }
+
+    public function __debugInfo(): array
+    {
+        return [
+            '名' => $this->firstName,
+            '性' => $this->lastName
+        ];
     }
 }
